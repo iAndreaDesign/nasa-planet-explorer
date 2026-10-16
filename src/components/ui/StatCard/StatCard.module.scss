@@ -55,12 +55,16 @@
 }
 
 .number {
-  font-size: type.$font-size-lg;
+  font-size: type.$font-size-md;
   font-weight: type.$font-weight-medium;
   line-height: type.$line-height-tight;
-  overflow-wrap: anywhere;
+  overflow-wrap: break-word;
 
   @include mixins.from-tablet {
+    font-size: type.$font-size-lg;
+  }
+
+  @include mixins.from-desktop {
     font-size: type.$font-size-xl;
   }
 }

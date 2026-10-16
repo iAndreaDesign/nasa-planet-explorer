@@ -1,0 +1,38 @@
+@use '../../styles/mixins';
+
+.page {
+  @include mixins.container;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding-block: 1.5rem 3rem;
+
+  @include mixins.from-tablet {
+    gap: 3rem;
+    padding-block: 2.5rem 4.5rem;
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+
+  @include mixins.from-tablet {
+    gap: 3.5rem;
+  }
+}
+
+.footer {
+  display: flex;
+  justify-content: flex-end;
+
+  > * {
+    flex: 1 1 auto;
+
+    @include mixins.from-tablet {
+      flex: 0 0 auto;
+    }
+  }
+}

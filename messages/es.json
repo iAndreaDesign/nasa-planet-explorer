@@ -65,5 +65,49 @@
       "configError": "Esta sección no está disponible: falta una credencial de la API en la configuración del servidor."
     },
     "opensInNewTab": "(se abre en una pestaña nueva)"
+  },
+  "detail": {
+    "allPlanets": "Todos los planetas",
+    "back": "Volver a todos los planetas",
+    "units": {
+      "days": "días",
+      "hours": "horas"
+    }
+  },
+  "planet": {
+    "eyebrow": "{position} / Sistema Solar",
+    "breadcrumbSection": "Sistema Solar",
+    "orbitalPeriod": "Periodo orbital",
+    "knownMoons": "Lunas conocidas",
+    "moonsCount": "{count, plural, one {# luna} other {# lunas}}",
+    "sections": {
+      "physical": "Propiedades físicas",
+      "orbit": "Órbita y rotación",
+      "temperature": "Temperatura"
+    },
+    "properties": {
+      "mass": "Masa",
+      "meanRadius": "Radio medio",
+      "density": "Densidad",
+      "gravity": "Gravedad superficial",
+      "escape": "Velocidad de escape",
+      "axialTilt": "Inclinación axial",
+      "semimajorAxis": "Semieje mayor",
+      "sideralOrbit": "Periodo orbital",
+      "sideralRotation": "Periodo de rotación",
+      "avgTemp": "Temperatura media"
+    },
+    "previous": "Planeta anterior: {name}",
+    "next": "Planeta siguiente: {name}",
+    "metaTitle": "{name} · NASA Planet Explorer",
+    "temperatureBadge": {
+      "cold": "Frío",
+      "hot": "Caliente"
+    }
+  },
+  "error": {
+    "title": "Algo ha salido mal",
+    "description": "No se ha podido mostrar esta página.",
+    "retry": "Reintentar"
   }
 }

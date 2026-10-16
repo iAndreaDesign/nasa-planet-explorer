@@ -25,7 +25,7 @@ Each planet card SHALL show the planet's `englishName`, its position in the orde
 - **THEN** its card shows 0 moons
 
 ### Requirement: Planet detail properties
-The planet detail page SHALL show the name, position, `bodyType`, an image and these properties with the API units: mass (kg, from `massValue` × 10^`massExponent`), mean radius (km), density (g/cm³), surface gravity (m/s²), escape velocity (m/s), axial tilt (°), semi-major axis (km), orbital period (days), rotation period (hours) and average temperature (K).
+The planet detail page SHALL show the name, position, an image and these properties with the API units: mass (kg, from `massValue` × 10^`massExponent`), mean radius (km), density (g/cm³), surface gravity (m/s²), escape velocity (m/s), axial tilt (°), semi-major axis (km), orbital period (days), rotation period (hours) and average temperature (K).
 
 #### Scenario: Mass display
 - **WHEN** `massValue` is 6.41712 and `massExponent` is 23
@@ -39,8 +39,23 @@ The planet detail page SHALL show the name, position, `bodyType`, an image and t
 - **WHEN** the API returns 0 for a quantity that cannot physically be zero (mass, radius, density, gravity, escape velocity, temperature, semi-major axis, orbital or rotation period)
 - **THEN** it is displayed as the translated "Not available", while an axial tilt of 0 is displayed as 0°
 
+### Requirement: Temperature badge
+The planet detail page SHALL show a badge derived from the average temperature (`avgTemp`): a blue "Cold" badge below 270 K and a red "Hot" badge above 323 K ("Frío" / "Caliente" in Spanish). Between 270 K and 323 K inclusive, or when the temperature is not available, no badge SHALL be shown. The API `bodyType` SHALL NOT be shown as a badge.
+
+#### Scenario: Cold planet
+- **WHEN** the detail page of a planet with `avgTemp` 210 is shown in Spanish
+- **THEN** a blue badge reads "Frío"
+
+#### Scenario: Hot planet
+- **WHEN** the detail page of a planet with `avgTemp` 737 is shown in English
+- **THEN** a red badge reads "Hot"
+
+#### Scenario: Temperate planet
+- **WHEN** the detail page of a planet with `avgTemp` 288 is shown
+- **THEN** no badge is displayed
+
 ### Requirement: No derived or editorial content
-Planet pages SHALL display only data returned by the API. They SHALL NOT include unit conversions, comparisons with Earth or descriptive texts.
+Planet pages SHALL display only data returned by the API, plus the temperature badge. They SHALL NOT include unit conversions, comparisons with Earth or descriptive texts.
 
 #### Scenario: Temperature
 - **WHEN** `avgTemp` is 210

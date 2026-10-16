@@ -27,7 +27,7 @@ function HeroLayout({ discoveryUrl, media }: HeroLayoutProps) {
         <p className={styles.description}>{t('description')}</p>
         <div className={styles.actions}>
           {discoveryUrl && (
-            <ButtonLink href={discoveryUrl} external>
+            <ButtonLink href={discoveryUrl} kind="external">
               {t('exploreDiscovery')}
             </ButtonLink>
           )}

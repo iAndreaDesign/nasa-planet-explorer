@@ -65,5 +65,49 @@
       "configError": "This section is not available: an API credential is missing in the server configuration."
     },
     "opensInNewTab": "(opens in a new tab)"
+  },
+  "detail": {
+    "allPlanets": "All planets",
+    "back": "Back to all planets",
+    "units": {
+      "days": "days",
+      "hours": "hours"
+    }
+  },
+  "planet": {
+    "eyebrow": "{position} / Solar System",
+    "breadcrumbSection": "Solar System",
+    "orbitalPeriod": "Orbital period",
+    "knownMoons": "Known moons",
+    "moonsCount": "{count, plural, one {# moon} other {# moons}}",
+    "sections": {
+      "physical": "Physical properties",
+      "orbit": "Orbit and rotation",
+      "temperature": "Temperature"
+    },
+    "properties": {
+      "mass": "Mass",
+      "meanRadius": "Mean radius",
+      "density": "Density",
+      "gravity": "Surface gravity",
+      "escape": "Escape velocity",
+      "axialTilt": "Axial tilt",
+      "semimajorAxis": "Semi-major axis",
+      "sideralOrbit": "Orbital period",
+      "sideralRotation": "Rotation period",
+      "avgTemp": "Average temperature"
+    },
+    "previous": "Previous planet: {name}",
+    "next": "Next planet: {name}",
+    "metaTitle": "{name} · NASA Planet Explorer",
+    "temperatureBadge": {
+      "cold": "Cold",
+      "hot": "Hot"
+    }
+  },
+  "error": {
+    "title": "Something went wrong",
+    "description": "This page could not be displayed.",
+    "retry": "Try again"
   }
 }

@@ -1,0 +1,11 @@
+@use '../../styles/typography' as type;
+
+.group {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.title {
+  font-size: type.$font-size-lg;
+}

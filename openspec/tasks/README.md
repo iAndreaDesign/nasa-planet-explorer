@@ -22,7 +22,7 @@ Se ejecuta **una tarea cada vez**, con confirmación previa y posterior (CLAUDE.
 | T08 | [Tema global y estructura (header/footer)](T08-tema-y-layout.md)        | T07                | Completada |
 | T09 | [Componentes UI compartidos](T09-componentes-ui.md)                     | T03, T08           | Completada |
 | T10 | [Página Home](T10-pagina-home.md)                                       | T04, T05, T06, T09 | Completada |
-| T11 | [Página de detalle de planeta](T11-detalle-planeta.md)                  | T05, T09           | Pendiente |
+| T11 | [Página de detalle de planeta](T11-detalle-planeta.md)                  | T05, T09           | Completada |
 | T12 | [Sección de lunas colapsable](T12-seccion-lunas.md)                     | T11                | Pendiente |
 | T13 | [Página de detalle de exoplaneta](T13-detalle-exoplaneta.md)            | T06, T11           | Pendiente |
 | T14 | [Revisión final y sincronización de specs](T14-revision-final.md)       | T10–T13            | Pendiente |
@@ -72,6 +72,7 @@ Las peticiones se hacen en Server Components; las lunas pasan por el Route Handl
 | D11 | Con 0 lunas se muestra "Moons (0)" con un mensaje de que no hay lunas. Se muestran como máximo 10 lunas, cargadas al expandir y con estado de carga.                                                                                      |
 | D12 | Inter. Toda la tipografía a un mínimo de 1rem.                                                                                                                                                                                          |
 | D13 | Interfaz en inglés y español con i18n (añadido a PROJECT.md §4).                                                                                                                                                                         |
+| D14 | Badge de temperatura en el detalle (en lugar del `bodyType`): < 270 K "Cold"/"Frío" (azul), > 323 K "Hot"/"Caliente" (rojo), entre medias sin badge (T11). |
 
 ## Confirmaciones
 

@@ -1,0 +1,118 @@
+@use '../../styles/mixins';
+@use '../../styles/typography' as type;
+
+.hero {
+  display: grid;
+  gap: 2rem;
+
+  @include mixins.from-desktop {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    align-items: center;
+    gap: 4rem;
+  }
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  order: 2;
+
+  @include mixins.from-desktop {
+    order: 1;
+  }
+}
+
+.eyebrow {
+  color: var(--color-text-accent);
+
+  @include type.eyebrow;
+}
+
+.name {
+  font-size: type.$font-size-display;
+  font-weight: type.$font-weight-medium;
+  letter-spacing: -0.02em;
+  overflow-wrap: anywhere;
+}
+
+.summary {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
+  gap: 0.75rem;
+  margin: 0.5rem 0 0;
+}
+
+.summaryItem {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 0.25rem;
+  padding: 1rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background-color: var(--color-surface);
+}
+
+.summaryLabel {
+  color: var(--color-text-muted);
+  font-size: type.$font-size-base;
+}
+
+.summaryValue {
+  margin: 0;
+  font-size: type.$font-size-lg;
+}
+
+.media {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  order: 1;
+  padding-inline: 3.5rem;
+
+  @include mixins.from-desktop {
+    order: 2;
+  }
+}
+
+.image {
+  width: min(100%, 26rem);
+  height: auto;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-pill);
+  background-color: rgb(12 19 32 / 70%);
+  color: var(--color-text);
+  transform: translateY(-50%);
+  transition:
+    border-color 150ms ease,
+    background-color 150ms ease;
+
+  &:hover {
+    border-color: var(--color-text-muted);
+    background-color: var(--color-surface-raised);
+  }
+}
+
+.previous {
+  left: 0;
+}
+
+.next {
+  right: 0;
+}
+
+.arrowIcon {
+  width: 1.5rem;
+  height: 1.5rem;
+}
