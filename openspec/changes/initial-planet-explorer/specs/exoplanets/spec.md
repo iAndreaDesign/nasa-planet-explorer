@@ -35,6 +35,17 @@ The exoplanet detail page SHALL show the name, an image and all queried fields w
 - **WHEN** `pl_dens` is null
 - **THEN** density is displayed as the translated "Not available"
 
+### Requirement: Exoplanet temperature badge
+The exoplanet detail page SHALL show the same temperature badge as planets, based on the equilibrium temperature (`pl_eqt`): "Cold" (blue) below 270 K, "Hot" (red) above 323 K, and no badge in between or when the value is not available. The image SHALL be labelled as an artist impression.
+
+#### Scenario: Hot exoplanet
+- **WHEN** the detail page of an exoplanet with `pl_eqt` 1203.65 is shown in Spanish
+- **THEN** a red badge reads "Caliente" and the image is labelled "Recreación artística"
+
+#### Scenario: Unknown temperature
+- **WHEN** `pl_eqt` is null
+- **THEN** no badge is shown and the temperature reads "Not available"
+
 ### Requirement: Exoplanet loading, errors and unknown slugs
 The Exoplanets section and detail page SHALL show a loading state while fetching and a translated error state on failure. A slug that does not match any of the selected exoplanets SHALL show the not-found page.
 

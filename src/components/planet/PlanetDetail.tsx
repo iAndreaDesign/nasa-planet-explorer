@@ -1,11 +1,11 @@
 import { useLocale, useTranslations } from 'next-intl';
 import { DetailHero } from '@/components/detail/DetailHero';
 import { DetailLayout } from '@/components/detail/DetailLayout';
+import { useTemperatureBadge } from '@/components/detail/useTemperatureBadge';
 import { PropertyGroup, type PropertyItem } from '@/components/detail/PropertyGroup';
 import { formatNumber } from '@/lib/format/number';
 import { formatPosition } from '@/lib/format/position';
 import { formatScientific } from '@/lib/format/scientific';
-import { classifyTemperature } from '@/lib/format/temperature';
 import { getPlanetImage } from '@/lib/images/celestialImages';
 import type { Adjacent } from '@/lib/navigation/adjacent';
 import type { Planet } from '@/services/solarSystem/types';
@@ -47,7 +47,7 @@ export function PlanetDetail({ planet, adjacent }: PlanetDetailProps) {
   });
 
   const days = tDetail('units.days');
-  const temperature = classifyTemperature(planet.avgTemp);
+  const badge = useTemperatureBadge(planet.avgTemp);
   const orbitalPeriod = number(planet.sideralOrbit);
   const averageTemperature = number(planet.avgTemp);
   const withUnit = (value: string | null, unit: string) => (value === null ? tCommon('notAvailable') : `${value} ${unit}`);
@@ -63,12 +63,7 @@ export function PlanetDetail({ planet, adjacent }: PlanetDetailProps) {
       <DetailHero
         eyebrow={t('eyebrow', { position: formatPosition(planet.position) })}
         name={planet.name}
-        badge={
-          temperature && {
-            label: t(`temperatureBadge.${temperature}`),
-            tone: temperature === 'cold' ? 'accent' : 'primary',
-          }
-        }
+        badge={badge}
         image={getPlanetImage(planet.slug, planet.position - 1)}
         summary={[
           { label: t('orbitalPeriod'), value: withUnit(orbitalPeriod, days) },

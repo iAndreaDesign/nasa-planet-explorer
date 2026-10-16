@@ -21,13 +21,15 @@ interface DetailHeroProps {
   name: string;
   badge: { label: string; tone: BadgeTone } | null;
   image: StaticImageData;
+  /** Short note under the image, e.g. "Artist impression". */
+  imageNote?: string;
   summary: readonly SummaryItem[];
   previous: AdjacentLink;
   next: AdjacentLink;
 }
 
 /** Name, temperature badge, key figures and image with circular previous/next arrows (spec `detail-navigation`). */
-export function DetailHero({ eyebrow, name, badge, image, summary, previous, next }: DetailHeroProps) {
+export function DetailHero({ eyebrow, name, badge, image, imageNote, summary, previous, next }: DetailHeroProps) {
   return (
     <section className={styles.hero} aria-labelledby="detail-title">
       <div className={styles.text}>
@@ -59,6 +61,7 @@ export function DetailHero({ eyebrow, name, badge, image, summary, previous, nex
         <Link href={next.href} className={`${styles.arrow} ${styles.next}`} aria-label={next.label}>
           <ChevronIcon direction="right" className={styles.arrowIcon} />
         </Link>
+        {imageNote && <p className={styles.imageNote}>{imageNote}</p>}
       </div>
     </section>
   );

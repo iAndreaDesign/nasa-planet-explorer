@@ -25,7 +25,7 @@ Each task is detailed (requirements, files, steps, acceptance criteria) in `open
 - [x] 4.1 T10 Home page — verify section tests and independent failure behaviour (`T10-pagina-home.md`)
 - [x] 4.2 T11 Planet detail page — verify property, not-found and circular navigation tests (`T11-detalle-planeta.md`)
 - [x] 4.3 T12 Moons section — verify collapse, max-10, zero-moon and no-token-in-browser checks (`T12-seccion-lunas.md`)
-- [ ] 4.4 T13 Exoplanet detail page — verify field, not-found and circular navigation tests (`T13-detalle-exoplaneta.md`)
+- [x] 4.4 T13 Exoplanet detail page — verify field, not-found and circular navigation tests (`T13-detalle-exoplaneta.md`)
 
 ## 5. Integration
 

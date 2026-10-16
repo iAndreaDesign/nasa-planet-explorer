@@ -116,3 +116,13 @@
   width: 1.5rem;
   height: 1.5rem;
 }
+
+.imageNote {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  color: var(--color-text-accent);
+  font-size: type.$font-size-base;
+  white-space: nowrap;
+  transform: translateX(-50%);
+}

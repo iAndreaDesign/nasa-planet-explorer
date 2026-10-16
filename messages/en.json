@@ -72,6 +72,10 @@
     "units": {
       "days": "days",
       "hours": "hours"
+    },
+    "temperatureBadge": {
+      "cold": "Cold",
+      "hot": "Hot"
     }
   },
   "planet": {
@@ -96,11 +100,7 @@
     },
     "previous": "Previous planet: {name}",
     "next": "Next planet: {name}",
-    "metaTitle": "{name} · NASA Planet Explorer",
-    "temperatureBadge": {
-      "cold": "Cold",
-      "hot": "Hot"
-    }
+    "metaTitle": "{name} · NASA Planet Explorer"
   },
   "error": {
     "title": "Something went wrong",
@@ -113,5 +113,32 @@
     "showing": "Showing {shown} of {total} moons.",
     "loadError": "This moon could not be loaded.",
     "unavailable": "No data is available for this moon."
+  },
+  "exoplanet": {
+    "eyebrow": "{position} / Exoplanets",
+    "breadcrumbSection": "Exoplanets",
+    "orbitalPeriod": "Orbital period",
+    "sections": {
+      "discovery": "Discovery",
+      "physical": "Physical properties"
+    },
+    "properties": {
+      "hostName": "Host star",
+      "discoveryYear": "Discovery year",
+      "discoveryMethod": "Discovery method",
+      "distance": "Distance",
+      "radius": "Radius",
+      "mass": "Mass",
+      "density": "Density",
+      "equilibriumTemperature": "Equilibrium temperature"
+    },
+    "units": {
+      "parsecs": "parsecs",
+      "earthRadii": "Earth radii",
+      "earthMasses": "Earth masses"
+    },
+    "previous": "Previous exoplanet: {name}",
+    "next": "Next exoplanet: {name}",
+    "metaTitle": "{name} · NASA Planet Explorer"
   }
 }

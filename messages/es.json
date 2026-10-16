@@ -72,6 +72,10 @@
     "units": {
       "days": "días",
       "hours": "horas"
+    },
+    "temperatureBadge": {
+      "cold": "Frío",
+      "hot": "Caliente"
     }
   },
   "planet": {
@@ -96,11 +100,7 @@
     },
     "previous": "Planeta anterior: {name}",
     "next": "Planeta siguiente: {name}",
-    "metaTitle": "{name} · NASA Planet Explorer",
-    "temperatureBadge": {
-      "cold": "Frío",
-      "hot": "Caliente"
-    }
+    "metaTitle": "{name} · NASA Planet Explorer"
   },
   "error": {
     "title": "Algo ha salido mal",
@@ -113,5 +113,32 @@
     "showing": "Mostrando {shown} de {total} lunas.",
     "loadError": "No se ha podido cargar esta luna.",
     "unavailable": "No hay datos disponibles de esta luna."
+  },
+  "exoplanet": {
+    "eyebrow": "{position} / Exoplanetas",
+    "breadcrumbSection": "Exoplanetas",
+    "orbitalPeriod": "Periodo orbital",
+    "sections": {
+      "discovery": "Descubrimiento",
+      "physical": "Propiedades físicas"
+    },
+    "properties": {
+      "hostName": "Estrella anfitriona",
+      "discoveryYear": "Año de descubrimiento",
+      "discoveryMethod": "Método de descubrimiento",
+      "distance": "Distancia",
+      "radius": "Radio",
+      "mass": "Masa",
+      "density": "Densidad",
+      "equilibriumTemperature": "Temperatura de equilibrio"
+    },
+    "units": {
+      "parsecs": "pársecs",
+      "earthRadii": "radios terrestres",
+      "earthMasses": "masas terrestres"
+    },
+    "previous": "Exoplaneta anterior: {name}",
+    "next": "Exoplaneta siguiente: {name}",
+    "metaTitle": "{name} · NASA Planet Explorer"
   }
 }

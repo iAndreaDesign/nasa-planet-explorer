@@ -24,7 +24,7 @@ Se ejecuta **una tarea cada vez**, con confirmación previa y posterior (CLAUDE.
 | T10 | [Página Home](T10-pagina-home.md)                                       | T04, T05, T06, T09 | Completada |
 | T11 | [Página de detalle de planeta](T11-detalle-planeta.md)                  | T05, T09           | Completada |
 | T12 | [Sección de lunas colapsable](T12-seccion-lunas.md)                     | T11                | Completada |
-| T13 | [Página de detalle de exoplaneta](T13-detalle-exoplaneta.md)            | T06, T11           | Pendiente |
+| T13 | [Página de detalle de exoplaneta](T13-detalle-exoplaneta.md)            | T06, T11           | Completada |
 | T14 | [Revisión final y sincronización de specs](T14-revision-final.md)       | T10–T13            | Pendiente |
 | T15 | [Mejora de imágenes](T15-mejora-imagenes.md) (por definir)              | T14                | Pendiente |
 
