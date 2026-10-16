@@ -36,7 +36,7 @@ Registrar en OpenSpec los requisitos aprobados. Según CLAUDE.md §6, OpenSpec e
 
 ## Notas / hallazgos
 
-- Cambio creado en `openspec/changes/initial-planet-explorer/`: proposal, design, tasks y 8 specs (`api-credentials`, `localization`, `astronomy-picture`, `solar-system-planets`, `planet-moons`, `exoplanets`, `app-shell`, `detail-navigation`). Los nombres provisionales (`credentials`, `i18n`, `ui-shell`…) se cambiaron por nombres de comportamiento.
+- Cambio creado en `openspec/changes/archive/2026-10-16-initial-planet-explorer/`: proposal, design, tasks y 8 specs (`api-credentials`, `localization`, `astronomy-picture`, `solar-system-planets`, `planet-moons`, `exoplanets`, `app-shell`, `detail-navigation`). Los nombres provisionales (`credentials`, `i18n`, `ui-shell`…) se cambiaron por nombres de comportamiento.
 - Artefactos en inglés, igual que PROJECT.md.
 - `openspec validate initial-planet-explorer --strict` → válido (2026-10-16).
 - El `tasks.md` del cambio enlaza a `openspec/tasks/` sin duplicar su contenido.

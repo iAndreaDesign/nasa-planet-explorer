@@ -29,7 +29,7 @@ Each task is detailed (requirements, files, steps, acceptance criteria) in `open
 
 ## 5. Integration
 
-- [ ] 5.1 T14 Final review — verify all checks, `astronomy-review`, accessibility/responsive/i18n review and token scan of the client bundle (`T14-revision-final.md`)
+- [x] 5.1 T14 Final review — verify all checks, `astronomy-review`, accessibility/responsive/i18n review and token scan of the client bundle (`T14-revision-final.md`)
 
 ## Workflow follow-up
 

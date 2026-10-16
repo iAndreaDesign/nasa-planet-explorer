@@ -25,7 +25,7 @@ Se ejecuta **una tarea cada vez**, con confirmación previa y posterior (CLAUDE.
 | T11 | [Página de detalle de planeta](T11-detalle-planeta.md)                  | T05, T09           | Completada |
 | T12 | [Sección de lunas colapsable](T12-seccion-lunas.md)                     | T11                | Completada |
 | T13 | [Página de detalle de exoplaneta](T13-detalle-exoplaneta.md)            | T06, T11           | Completada |
-| T14 | [Revisión final y sincronización de specs](T14-revision-final.md)       | T10–T13            | Pendiente |
+| T14 | [Revisión final y sincronización de specs](T14-revision-final.md)       | T10–T13            | Completada |
 | T15 | [Mejora de imágenes](T15-mejora-imagenes.md) (por definir)              | T14                | Pendiente |
 
 Son independientes entre sí: T02/T03, T05/T06 y T07 (puede hacerse justo después de T01).
@@ -73,6 +73,7 @@ Las peticiones se hacen en Server Components; las lunas pasan por el Route Handl
 | D12 | Inter. Toda la tipografía a un mínimo de 1rem.                                                                                                                                                                                          |
 | D13 | Interfaz en inglés y español con i18n (añadido a PROJECT.md §4).                                                                                                                                                                         |
 | D14 | Badge de temperatura en el detalle (en lugar del `bodyType`): < 270 K "Cold"/"Frío" (azul), > 323 K "Hot"/"Caliente" (rojo), entre medias sin badge (T11). |
+| D15 | Revisión final (T14): unidades en la misma línea que el valor y más pequeñas; se mantienen "pc" en la tarjeta y "pársecs" en el detalle, Mercurio sin temperatura (la API da 0) y "Planet" sin traducir. |
 
 ## Confirmaciones
 
