@@ -11,7 +11,7 @@ Each task is detailed (requirements, files, steps, acceptance criteria) in `open
 ## 2. Data services
 
 - [x] 2.1 T04 HTTP client and APOD service — verify integration tests (video fallback, errors, missing key) pass (`T04-servicio-apod.md`)
-- [ ] 2.2 T05 Solar System service — verify integration tests (ordering, nulls, moon id validation) pass (`T05-servicio-sistema-solar.md`)
+- [x] 2.2 T05 Solar System service — verify integration tests (ordering, nulls, moon id validation) pass (`T05-servicio-sistema-solar.md`)
 - [ ] 2.3 T06 Exoplanets service — verify integration tests (mapping, slugs, errors) pass (`T06-servicio-exoplanetas.md`)
 
 ## 3. Interface foundation

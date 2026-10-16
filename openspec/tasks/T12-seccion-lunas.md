@@ -14,6 +14,7 @@ Añadir al detalle de planeta la sección "Moons (N)", plegada por defecto, que 
 - Con 0 lunas: "Moons (0)" y un mensaje de que no hay lunas conocidas, sin peticiones.
 - Disclosure accesible (`button` + `aria-expanded` + `aria-controls`).
 - Las peticiones van a un Route Handler propio (`/api/moons/[id]`) que añade el token en servidor y valida el id (D3, T05).
+- Nombre: antes de cargar, el de la lista del planeta (en francés en la API); una vez cargado, el `englishName` del detalle (hallazgo de T05).
 - Estado de carga y error por luna; caché en el cliente para no repetir peticiones al plegar y desplegar.
 
 ## Archivos afectados

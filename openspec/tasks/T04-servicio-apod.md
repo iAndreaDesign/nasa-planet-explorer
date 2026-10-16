@@ -42,5 +42,5 @@ Crear un cliente `fetchJson` tipado y compartido, y el servicio que obtiene la �
 - `fetchJson`: timeout de 10 s (`AbortSignal.timeout`); `api_key` se sustituye por `[redacted]` en las URLs de los errores; ante un error de red se descarta el error original, porque podría contener la URL.
 - Caché: `next: { revalidate: 3600 }` (modelo de caché clásico; `cacheComponents` no está activado, según la documentación local de Next 16).
 - Pendiente para T10: `next/image` necesitará `images.remotePatterns` para `assets.science.nasa.gov`.
-- Sin prueba real contra la API: `.env` aún está vacío. Se hará cuando el usuario añada la clave.
+- Prueba real (2026-10-16, con la clave del usuario): la entrada del día era un vídeo y el servicio devolvió la imagen anterior, "The Milky Way over Manhattan" (2026-10-15), con su `hdurl` y su `alt`. La API acepta el parámetro `api_key`.
 - Verificación: test ✔ (113/113 en total, 30 nuevos), lint ✔, typecheck ✔, build ✔.

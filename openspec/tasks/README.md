@@ -16,7 +16,7 @@ Se ejecuta **una tarea cada vez**, con confirmación previa y posterior (CLAUDE.
 | T02 | [Gestión de credenciales](T02-credenciales.md)                          | T01                | Completada |
 | T03 | [Utilidades de dominio y formato](T03-utilidades-formato.md)            | T01                | Completada |
 | T04 | [Cliente HTTP y servicio APOD](T04-servicio-apod.md)                    | T02, T03           | Completada |
-| T05 | [Servicio Sistema Solar](T05-servicio-sistema-solar.md)                 | T04                | Pendiente |
+| T05 | [Servicio Sistema Solar](T05-servicio-sistema-solar.md)                 | T04                | Completada |
 | T06 | [Servicio Exoplanetas](T06-servicio-exoplanetas.md)                     | T04                | Pendiente |
 | T07 | [Internacionalización (en/es)](T07-internacionalizacion.md)             | T01                | Pendiente |
 | T08 | [Tema global y estructura (header/footer)](T08-tema-y-layout.md)        | T07                | Pendiente |
@@ -40,7 +40,7 @@ src/
   i18n/                     # configuración de idiomas y routing
   app/[locale]/
     layout.tsx, page.tsx, loading.tsx, error.tsx, not-found.tsx
-    planets/[id]/page.tsx
+    planets/[slug]/page.tsx
     exoplanets/[slug]/page.tsx
   app/api/moons/[id]/route.ts   # proxy servidor: el token nunca llega al navegador
   lib/

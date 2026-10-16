@@ -35,6 +35,10 @@ The planet detail page SHALL show the name, position, `bodyType`, an image and t
 - **WHEN** a property is null, missing or not a number
 - **THEN** it is displayed as the translated "Not available"
 
+#### Scenario: Zero used by the API as unknown
+- **WHEN** the API returns 0 for a quantity that cannot physically be zero (mass, radius, density, gravity, escape velocity, temperature, semi-major axis, orbital or rotation period)
+- **THEN** it is displayed as the translated "Not available", while an axial tilt of 0 is displayed as 0°
+
 ### Requirement: No derived or editorial content
 Planet pages SHALL display only data returned by the API. They SHALL NOT include unit conversions, comparisons with Earth or descriptive texts.
 
