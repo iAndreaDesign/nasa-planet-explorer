@@ -15,7 +15,7 @@ Se ejecuta **una tarea cada vez**, con confirmación previa y posterior (CLAUDE.
 | T01 | [Scaffold del proyecto](T01-scaffold-proyecto.md)                       | T00                | Completada |
 | T02 | [Gestión de credenciales](T02-credenciales.md)                          | T01                | Completada |
 | T03 | [Utilidades de dominio y formato](T03-utilidades-formato.md)            | T01                | Completada |
-| T04 | [Cliente HTTP y servicio APOD](T04-servicio-apod.md)                    | T02, T03           | Pendiente |
+| T04 | [Cliente HTTP y servicio APOD](T04-servicio-apod.md)                    | T02, T03           | Completada |
 | T05 | [Servicio Sistema Solar](T05-servicio-sistema-solar.md)                 | T04                | Pendiente |
 | T06 | [Servicio Exoplanetas](T06-servicio-exoplanetas.md)                     | T04                | Pendiente |
 | T07 | [Internacionalización (en/es)](T07-internacionalizacion.md)             | T01                | Pendiente |
