@@ -33,4 +33,4 @@ Crear `/[locale]/exoplanets/[slug]` con todos los datos del exoplaneta, reutiliz
 
 ## Notas / hallazgos
 
-—
+- Ver T07: en Next 16.4.2, la página de `notFound()` se renderiza en el cliente (shell `__next_error__`, estado 404). Hay que comprobarlo en el navegador.

@@ -18,7 +18,7 @@ Se ejecuta **una tarea cada vez**, con confirmación previa y posterior (CLAUDE.
 | T04 | [Cliente HTTP y servicio APOD](T04-servicio-apod.md)                    | T02, T03           | Completada |
 | T05 | [Servicio Sistema Solar](T05-servicio-sistema-solar.md)                 | T04                | Completada |
 | T06 | [Servicio Exoplanetas](T06-servicio-exoplanetas.md)                     | T04                | Completada |
-| T07 | [Internacionalización (en/es)](T07-internacionalizacion.md)             | T01                | Pendiente |
+| T07 | [Internacionalización (en/es)](T07-internacionalizacion.md)             | T01                | Completada |
 | T08 | [Tema global y estructura (header/footer)](T08-tema-y-layout.md)        | T07                | Pendiente |
 | T09 | [Componentes UI compartidos](T09-componentes-ui.md)                     | T03, T08           | Pendiente |
 | T10 | [Página Home](T10-pagina-home.md)                                       | T04, T05, T06, T09 | Pendiente |
@@ -36,7 +36,7 @@ Son independientes entre sí: T02/T03, T05/T06 y T07 (puede hacerse justo despu�
 planets/                    # imágenes aportadas por el usuario (importación estática)
 messages/en.json, es.json   # textos de la interfaz
 src/
-  middleware.ts             # detección y redirección de idioma
+  proxy.ts                  # detección y redirección de idioma (Next 16: antes middleware)
   i18n/                     # configuración de idiomas y routing
   app/[locale]/
     layout.tsx, page.tsx, loading.tsx, error.tsx, not-found.tsx

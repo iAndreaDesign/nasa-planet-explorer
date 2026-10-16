@@ -16,7 +16,7 @@ Each task is detailed (requirements, files, steps, acceptance criteria) in `open
 
 ## 3. Interface foundation
 
-- [ ] 3.1 T07 Localisation en/es — verify key-parity test and language switching tests pass (`T07-internacionalizacion.md`)
+- [x] 3.1 T07 Localisation en/es — verify key-parity test and language switching tests pass (`T07-internacionalizacion.md`)
 - [ ] 3.2 T08 Theme, header and footer — verify component tests pass and visual check against mockups (`T08-tema-y-layout.md`)
 - [ ] 3.3 T09 Shared UI components — verify component tests for states and "Not available" pass (`T09-componentes-ui.md`)
 

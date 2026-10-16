@@ -1,0 +1,28 @@
+{
+  "metadata": {
+    "title": "NASA Planet Explorer",
+    "description": "Explore the planets of the Solar System and recently discovered exoplanets."
+  },
+  "common": {
+    "notAvailable": "Not available"
+  },
+  "language": {
+    "label": "Language",
+    "names": {
+      "en": "English",
+      "es": "Español"
+    },
+    "short": {
+      "en": "EN",
+      "es": "ES"
+    }
+  },
+  "home": {
+    "title": "NASA Planet Explorer"
+  },
+  "notFound": {
+    "title": "Page not found",
+    "description": "The page you are looking for does not exist.",
+    "backHome": "Back to home"
+  }
+}

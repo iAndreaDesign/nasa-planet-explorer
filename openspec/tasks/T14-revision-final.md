@@ -14,6 +14,7 @@ Verificar el conjunto (datos, i18n, accesibilidad, responsive y seguridad) y dej
 - Accesibilidad: navegación completa por teclado, foco visible, landmarks, `alt` en todas las imágenes y contraste AA.
 - Responsive: comparación con los 4 mockups (≈390px y 1440px), sin scroll horizontal.
 - Seguridad: no hay tokens en el bundle del cliente (búsqueda en `.next/static`), en el repo ni en los logs.
+- Revisar en el navegador las páginas 404 (`notFound()` se renderiza en el cliente en Next 16.4.2, ver T07) y si una versión posterior de Next lo corrige.
 - Sincronizar o archivar el cambio de OpenSpec (`/opsx:sync`, `/opsx:archive`).
 
 ## Archivos afectados
