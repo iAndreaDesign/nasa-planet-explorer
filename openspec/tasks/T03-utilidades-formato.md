@@ -1,6 +1,6 @@
 # T03 — Utilidades de dominio y formato
 
-- **Estado:** Pendiente
+- **Estado:** Completada (2026-10-16)
 - **Depende de:** T01
 
 ## Objetivo
@@ -19,7 +19,7 @@ Reunir en funciones puras la lógica de presentación de valores astronómicos, 
 
 ## Archivos afectados
 
-`src/lib/format/*.ts` y sus `*.test.ts`.
+`src/lib/format/{locale,number,scientific,position,slug}.ts`, `src/lib/navigation/adjacent.ts` y sus `*.test.ts`.
 
 ## Pasos
 
@@ -28,10 +28,16 @@ Reunir en funciones puras la lógica de presentación de valores astronómicos, 
 
 ## Criterios de aceptación
 
-- [ ] Todos los tests unitarios pasan.
-- [ ] Ninguna función usa `any`.
-- [ ] typecheck y lint pasan.
+- [x] Todos los tests unitarios pasan.
+- [x] Ninguna función usa `any`.
+- [x] typecheck y lint pasan.
 
 ## Notas / hallazgos
 
-—
+- `getAdjacent` va en `src/lib/navigation/` en lugar de `lib/format/`, porque no es formateo.
+- `locale.ts` define `AppLocale` (`en` | `es`), `DEFAULT_LOCALE` e `isAppLocale`; lo reutilizará la configuración de i18n (T07).
+- Las funciones de formato devuelven `null` para valores ausentes, `NaN`, `Infinity` o tipos no numéricos (las cadenas numéricas también se rechazan); la UI muestra "Not available" traducido.
+- `formatScientific` normaliza la mantisa a [1, 10), redondea a 2 decimales y ajusta el exponente si el redondeo llega a 10 (9,999 × 10²³ → 1 × 10²⁴). Con exponente 0 no muestra la potencia; un exponente no entero devuelve `null`.
+- Español (CLDR): los números de 4 cifras no llevan separador de miles (`6779`); a partir de 5 cifras sí (`12.345`). Es el comportamiento estándar de `Intl` y está cubierto por un test.
+- `createUniqueSlugs` añade `-2`, `-3`… a las colisiones por orden de aparición, sin chocar con nombres que ya terminan así; los nombres sin caracteres válidos pasan a `item`.
+- Verificación: test ✔ (83/83 en total, 70 nuevos), lint ✔, typecheck ✔, build ✔, sin `any`.

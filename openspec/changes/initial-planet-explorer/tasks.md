@@ -6,7 +6,7 @@ Each task is detailed (requirements, files, steps, acceptance criteria) in `open
 
 - [x] 1.1 T01 Project scaffold (Next.js, TS strict, SCSS, Vitest, ESLint, npm, git) — verify `lint`, `typecheck`, `test` and `build` pass (`openspec/tasks/T01-scaffold-proyecto.md`)
 - [x] 1.2 T02 Credentials from environment variables — verify unit tests for missing/empty variables pass and no token is tracked (`T02-credenciales.md`)
-- [ ] 1.3 T03 Locale-aware formatting and domain utilities — verify unit tests for edge cases pass (`T03-utilidades-formato.md`)
+- [x] 1.3 T03 Locale-aware formatting and domain utilities — verify unit tests for edge cases pass (`T03-utilidades-formato.md`)
 
 ## 2. Data services
 
