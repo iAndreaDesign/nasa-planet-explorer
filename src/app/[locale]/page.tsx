@@ -1,25 +1,36 @@
 import { notFound } from 'next/navigation';
-import { hasLocale, useTranslations } from 'next-intl';
+import { hasLocale } from 'next-intl';
 import { setRequestLocale } from 'next-intl/server';
-import { use } from 'react';
+import { Suspense } from 'react';
+import { ExoplanetsSection, ExoplanetsSectionFallback } from '@/components/home/ExoplanetsSection/ExoplanetsSection';
+import { Hero, HeroFallback } from '@/components/home/Hero/Hero';
+import { SolarSystemSection, SolarSystemSectionFallback } from '@/components/home/SolarSystemSection/SolarSystemSection';
 import { routing } from '@/i18n/routing';
-import styles from './page.module.scss';
+
+/** Re-render at least hourly, also when a section failed (e.g. missing credentials) at build time. */
+export const revalidate = 3600;
 
 interface HomePageProps {
   params: Promise<{ locale: string }>;
 }
 
-/** Placeholder until the home sections are built (T10). */
-export default function HomePage({ params }: HomePageProps) {
-  const { locale } = use(params);
+/** Each section loads and fails independently (spec `app-shell`). */
+export default async function HomePage({ params }: HomePageProps) {
+  const { locale } = await params;
   if (!hasLocale(routing.locales, locale)) notFound();
   setRequestLocale(locale);
 
-  const t = useTranslations('home');
-
   return (
-    <div className={styles.page}>
-      <h1>{t('title')}</h1>
-    </div>
+    <>
+      <Suspense fallback={<HeroFallback />}>
+        <Hero />
+      </Suspense>
+      <Suspense fallback={<SolarSystemSectionFallback />}>
+        <SolarSystemSection />
+      </Suspense>
+      <Suspense fallback={<ExoplanetsSectionFallback />}>
+        <ExoplanetsSection />
+      </Suspense>
+    </>
   );
 }

@@ -21,7 +21,7 @@ Se ejecuta **una tarea cada vez**, con confirmación previa y posterior (CLAUDE.
 | T07 | [Internacionalización (en/es)](T07-internacionalizacion.md)             | T01                | Completada |
 | T08 | [Tema global y estructura (header/footer)](T08-tema-y-layout.md)        | T07                | Completada |
 | T09 | [Componentes UI compartidos](T09-componentes-ui.md)                     | T03, T08           | Completada |
-| T10 | [Página Home](T10-pagina-home.md)                                       | T04, T05, T06, T09 | Pendiente |
+| T10 | [Página Home](T10-pagina-home.md)                                       | T04, T05, T06, T09 | Completada |
 | T11 | [Página de detalle de planeta](T11-detalle-planeta.md)                  | T05, T09           | Pendiente |
 | T12 | [Sección de lunas colapsable](T12-seccion-lunas.md)                     | T11                | Pendiente |
 | T13 | [Página de detalle de exoplaneta](T13-detalle-exoplaneta.md)            | T06, T11           | Pendiente |

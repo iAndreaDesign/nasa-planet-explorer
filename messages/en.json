@@ -18,7 +18,27 @@
     }
   },
   "home": {
-    "title": "NASA Planet Explorer"
+    "hero": {
+      "titleLine1": "A universe.",
+      "titleLine2": "Within reach.",
+      "description": "From our celestial neighbours to worlds orbiting distant stars. Find your next extraordinary discovery.",
+      "exploreDiscovery": "Explore last discovery",
+      "discoverPlanets": "Discover planets",
+      "apodLabel": "Astronomy Picture of the Day"
+    },
+    "solarSystem": {
+      "title": "Solar System",
+      "description": "Eight planets. One extraordinary system. Choose a world to get closer.",
+      "count": "{count} planets",
+      "position": "{position} / {type}",
+      "moons": "{count, plural, one {# moon} other {# moons}}"
+    },
+    "exoplanets": {
+      "title": "Exoplanets",
+      "description": "Other stars. The latest discoveries.",
+      "count": "{count} selected worlds",
+      "distance": "{distance} pc"
+    }
   },
   "notFound": {
     "title": "Page not found",
@@ -43,6 +63,7 @@
       "empty": "There is nothing to show right now.",
       "error": "We could not load this data. Please try again later.",
       "configError": "This section is not available: an API credential is missing in the server configuration."
-    }
+    },
+    "opensInNewTab": "(opens in a new tab)"
   }
 }

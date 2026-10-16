@@ -1,6 +1,6 @@
 # T09 — Componentes UI compartidos
 
-- **Estado:** Completada (2026-10-16), salvo la comprobación visual, que se hace en T10
+- **Estado:** Completada (2026-10-16; comprobación visual hecha en T10)
 - **Depende de:** T03, T08
 
 ## Objetivo
@@ -29,7 +29,7 @@ Crear los componentes presentacionales reutilizados por el home y los detalles.
 ## Criterios de aceptación
 
 - [x] Los tests pasan.
-- [ ] El estilo es coherente con las tarjetas de los mockups. → Se comprueba visualmente en T10, cuando las tarjetas se rendericen en el home (aún no se usan en ninguna página).
+- [x] El estilo es coherente con las tarjetas de los mockups (comprobado con capturas en T10).
 - [x] Navegación por teclado con foco visible.
 - [x] lint, typecheck y build pasan.
 

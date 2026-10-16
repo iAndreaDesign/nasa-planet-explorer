@@ -1,0 +1,140 @@
+@use '../../../styles/mixins';
+@use '../../../styles/typography' as type;
+
+.hero {
+  @include mixins.container;
+
+  display: grid;
+  gap: 2rem;
+  padding-block: 2rem 1rem;
+
+  @include mixins.from-desktop {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    align-items: center;
+    gap: 4rem;
+    padding-block: 5rem 3rem;
+  }
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  order: 2;
+
+  @include mixins.from-desktop {
+    order: 1;
+  }
+}
+
+.title {
+  font-size: type.$font-size-display;
+  font-weight: type.$font-weight-regular;
+  letter-spacing: -0.02em;
+}
+
+.line {
+  display: block;
+}
+
+.description {
+  max-width: 34rem;
+  color: var(--color-text-muted);
+  font-size: type.$font-size-md;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+
+  > * {
+    flex: 1 1 auto;
+
+    @include mixins.from-tablet {
+      flex: 0 0 auto;
+    }
+  }
+}
+
+.media {
+  order: 1;
+
+  @include mixins.from-desktop {
+    order: 2;
+  }
+}
+
+.figure {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 0;
+}
+
+.imageLink {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background-color: var(--color-surface-sunken);
+
+  @include mixins.from-desktop {
+    aspect-ratio: 1 / 1;
+  }
+
+  &:hover .image {
+    transform: scale(1.03);
+  }
+}
+
+.image {
+  object-fit: cover;
+  transition: transform 300ms ease;
+}
+
+.caption {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.captionLabel {
+  color: var(--color-text-accent);
+
+  @include type.eyebrow;
+}
+
+.captionTitle {
+  font-size: type.$font-size-md;
+  font-weight: type.$font-weight-medium;
+}
+
+.skeleton {
+  aspect-ratio: 4 / 3;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background: linear-gradient(100deg, var(--color-surface) 30%, var(--color-surface-raised) 50%, var(--color-surface) 70%);
+  background-size: 300% 100%;
+  animation: shimmer 1.6s ease-in-out infinite;
+
+  @include mixins.from-desktop {
+    aspect-ratio: 1 / 1;
+  }
+}
+
+.visuallyHidden {
+  @include mixins.visually-hidden;
+}
+
+@keyframes shimmer {
+  from {
+    background-position: 100% 0;
+  }
+
+  to {
+    background-position: 0 0;
+  }
+}

@@ -1,0 +1,33 @@
+@use '../../../styles/mixins';
+
+.section {
+  @include mixins.container;
+
+  padding-block: 2.5rem;
+  scroll-margin-top: 1rem;
+
+  @include mixins.from-tablet {
+    padding-block: 3.5rem;
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  @include mixins.from-tablet {
+    gap: 1.5rem;
+  }
+
+  @include mixins.from-desktop {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+.item {
+  min-width: 0;
+}
