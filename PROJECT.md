@@ -110,7 +110,9 @@ The API returns a JSON object containing a `bodies` array with the planets and t
 ### Exoplanets API
 
 **Endpoint**
-GET `https://exoplanetarchive.ipac.caltech.edu/TAP/sync?api_key=<NASA_API_KEY>&query=select+top+10+pl_name,hostname,disc_year,discoverymethod,sy_dist,pl_rade,pl_bmasse,pl_orbper,pl_eqt+from+pscomppars+where+disc_year+is+not+null+order+by+disc_year+desc,pl_name+asc&format=json`
+GET `https://exoplanetarchive.ipac.caltech.edu/TAP/sync?api_key=<NASA_API_KEY>&query=select+pl_name,hostname,disc_year,discoverymethod,sy_dist,pl_rade,pl_bmasse,pl_orbper,pl_eqt,pl_dens+from+pscomppars+where+disc_year+is+not+null+order+by+disc_year+desc,pl_name+asc&format=json&maxrec=10`
+
+> The limit uses the TAP `maxrec=10` parameter instead of `select top 10`: this service applies `TOP` before `ORDER BY`, so `top 10` does not return the latest discoveries (verified 2026-10-16). `pl_dens` (density, g/cm³) is included.
 
 **Authentication**
 Include the following this URL parameter

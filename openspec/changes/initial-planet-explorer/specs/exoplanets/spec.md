@@ -13,6 +13,10 @@ The system SHALL query the Exoplanet Archive for the top 10 exoplanets with a kn
 - **WHEN** the home page loads successfully
 - **THEN** the Exoplanets section shows 10 cards in the order returned by the query
 
+#### Scenario: Latest discoveries
+- **WHEN** the archive contains exoplanets discovered in the current year
+- **THEN** the selection contains the 10 exoplanets with the most recent discovery years, not an arbitrary subset sorted afterwards
+
 ### Requirement: Exoplanet card content
 Each exoplanet card SHALL show `pl_name`, the system distance `sy_dist` in parsecs and a visual representation. The whole card SHALL be a keyboard-accessible link to the exoplanet detail page, identified by a URL-safe slug of its name.
 
