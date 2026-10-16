@@ -78,12 +78,9 @@
     "eyebrow": "{position} / Sistema Solar",
     "breadcrumbSection": "Sistema Solar",
     "orbitalPeriod": "Periodo orbital",
-    "knownMoons": "Lunas conocidas",
-    "moonsCount": "{count, plural, one {# luna} other {# lunas}}",
     "sections": {
       "physical": "Propiedades físicas",
-      "orbit": "Órbita y rotación",
-      "temperature": "Temperatura"
+      "orbit": "Órbita y rotación"
     },
     "properties": {
       "mass": "Masa",
@@ -109,5 +106,12 @@
     "title": "Algo ha salido mal",
     "description": "No se ha podido mostrar esta página.",
     "retry": "Reintentar"
+  },
+  "moons": {
+    "title": "Lunas ({count})",
+    "none": "Este planeta no tiene lunas conocidas.",
+    "showing": "Mostrando {shown} de {total} lunas.",
+    "loadError": "No se ha podido cargar esta luna.",
+    "unavailable": "No hay datos disponibles de esta luna."
   }
 }

@@ -1,0 +1,130 @@
+@use '../../../styles/mixins';
+@use '../../../styles/typography' as type;
+
+.section {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background-color: var(--color-surface-sunken);
+}
+
+.heading {
+  font-size: type.$font-size-lg;
+}
+
+.toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  width: 100%;
+  min-height: 3.5rem;
+  padding: 1.25rem 1.5rem;
+  border: 0;
+  border-radius: var(--radius-lg);
+  background: none;
+  color: var(--color-text);
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+
+  &:hover {
+    background-color: var(--color-surface);
+  }
+}
+
+.chevron {
+  flex-shrink: 0;
+  width: 1.5rem;
+  height: 1.5rem;
+  color: var(--color-text-muted);
+  transition: transform 150ms ease;
+}
+
+.chevronOpen {
+  transform: rotate(90deg);
+}
+
+.panel {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 0 1rem 1.25rem;
+
+  @include mixins.from-tablet {
+    padding: 0 1.5rem 1.5rem;
+  }
+
+  &[hidden] {
+    display: none;
+  }
+}
+
+.list {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 0.75rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  @include mixins.from-tablet {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  @include mixins.from-desktop {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.item {
+  min-width: 0;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  height: 100%;
+  padding: 1rem 1.25rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background-color: var(--color-surface);
+}
+
+.name {
+  font-size: type.$font-size-md;
+  font-weight: type.$font-weight-semibold;
+}
+
+.state {
+  color: var(--color-text-muted);
+  font-size: type.$font-size-base;
+}
+
+.properties {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin: 0;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.25rem 1rem;
+  font-size: type.$font-size-base;
+
+  dt {
+    color: var(--color-text-muted);
+  }
+
+  dd {
+    margin: 0;
+  }
+}
+
+.note {
+  color: var(--color-text-muted);
+  font-size: type.$font-size-base;
+}

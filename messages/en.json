@@ -78,12 +78,9 @@
     "eyebrow": "{position} / Solar System",
     "breadcrumbSection": "Solar System",
     "orbitalPeriod": "Orbital period",
-    "knownMoons": "Known moons",
-    "moonsCount": "{count, plural, one {# moon} other {# moons}}",
     "sections": {
       "physical": "Physical properties",
-      "orbit": "Orbit and rotation",
-      "temperature": "Temperature"
+      "orbit": "Orbit and rotation"
     },
     "properties": {
       "mass": "Mass",
@@ -109,5 +106,12 @@
     "title": "Something went wrong",
     "description": "This page could not be displayed.",
     "retry": "Try again"
+  },
+  "moons": {
+    "title": "Moons ({count})",
+    "none": "This planet has no known moons.",
+    "showing": "Showing {shown} of {total} moons.",
+    "loadError": "This moon could not be loaded.",
+    "unavailable": "No data is available for this moon."
   }
 }

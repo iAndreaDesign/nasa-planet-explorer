@@ -53,12 +53,12 @@ afterEach(() => {
 });
 
 describe('PlanetDetail', () => {
-  it('renders the hero with position, name, orbital period and moons', () => {
+  it('renders the hero with position, name, orbital period and average temperature', () => {
     renderMars();
 
     expect(screen.getByRole('heading', { level: 1, name: 'Mars' })).toBeInTheDocument();
     expect(screen.getByText('04 / Solar System')).toBeInTheDocument();
-    expect(definitionOf('Known moons')).toHaveTextContent('2 moons');
+    expect(definitionOf('Average temperature')).toHaveTextContent('210 K');
     expect(screen.getAllByText('Orbital period', { selector: 'dt, dt *' })).toHaveLength(2);
   });
 
@@ -73,8 +73,7 @@ describe('PlanetDetail', () => {
     expect(definitionOf('Axial tilt')).toHaveTextContent('25.19°');
     expect(definitionOf('Semi-major axis')).toHaveTextContent('227,939,200km');
     expect(definitionOf('Rotation period')).toHaveTextContent('24.62hours');
-    expect(definitionOf('Average temperature')).toHaveTextContent('210K');
-    for (const title of ['Physical properties', 'Orbit and rotation', 'Temperature']) {
+    for (const title of ['Physical properties', 'Orbit and rotation']) {
       expect(screen.getByRole('heading', { level: 2, name: title })).toBeInTheDocument();
     }
   });
@@ -85,7 +84,7 @@ describe('PlanetDetail', () => {
     expect(screen.getByText('04 / Sistema Solar')).toBeInTheDocument();
     expect(definitionOf('Gravedad superficial')).toHaveTextContent('3,71m/s²');
     expect(definitionOf('Periodo de rotación')).toHaveTextContent('24,62horas');
-    expect(definitionOf('Lunas conocidas')).toHaveTextContent('2 lunas');
+    expect(definitionOf('Temperatura media')).toHaveTextContent('210 K');
   });
 
   it.each([
@@ -114,6 +113,14 @@ describe('PlanetDetail', () => {
 
     for (const label of ['Cold', 'Hot', 'Planet']) expect(screen.queryByText(label)).not.toBeInTheDocument();
     expect(container.querySelector('[class*="badge"]')).toBeNull();
+  });
+
+  it('places the moons section right after the hero and does not repeat the temperature', () => {
+    renderMars();
+
+    const headings = screen.getAllByRole('heading', { level: 2 }).map((heading) => heading.textContent);
+    expect(headings).toEqual(['Moons (2)', 'Physical properties', 'Orbit and rotation']);
+    expect(screen.getAllByText('Average temperature')).toHaveLength(1);
   });
 
   it('keeps a retrograde (negative) rotation', () => {

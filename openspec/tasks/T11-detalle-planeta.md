@@ -46,4 +46,5 @@ Crear `/[locale]/planets/[slug]` con los datos del planeta, siguiendo el estilo 
 - Ajuste visual: en móvil, "1,426,666,422 km" se partía en mitad del número; el valor de `StatCard` pasa a 1.125rem en móvil (1.375rem en tablet, 2rem en escritorio) con `overflow-wrap: break-word`.
 - Verificación visual (Edge headless, datos reales): `/es/planets/mars` a 1440 px y `/en/planets/saturn` a 390 px reales, comparadas con `detail.png` y `detail-mobile.png`. `<title>` por planeta ("Mars · NASA Planet Explorer").
 - Ver T07: la página 404 de `notFound()` se renderiza en el cliente en Next 16.4.2.
+- **Reorganización (petición del usuario, durante T12):** orden final: hero → "Moons (N)" → propiedades físicas → órbita y rotación. El resumen del hero muestra el periodo orbital y la **temperatura media** (en lugar de las lunas conocidas, que ya aparecen en "Moons (N)"). Se elimina el grupo "Temperature" para no repetir el dato.
 - Verificación: test ✔ (318/318 en total, 39 nuevos), lint ✔, typecheck ✔, build ✔ (16 rutas SSG).

@@ -10,6 +10,7 @@ import { getPlanetImage } from '@/lib/images/celestialImages';
 import type { Adjacent } from '@/lib/navigation/adjacent';
 import type { Planet } from '@/services/solarSystem/types';
 import { SOLAR_SYSTEM_SECTION_ID } from '../home/SolarSystemSection/SolarSystemSection';
+import { MoonsSection } from './MoonsSection/MoonsSection';
 
 interface PlanetDetailProps {
   planet: Planet;
@@ -25,10 +26,12 @@ type PropertyKey =
   | 'axialTilt'
   | 'semimajorAxis'
   | 'sideralOrbit'
-  | 'sideralRotation'
-  | 'avgTemp';
+  | 'sideralRotation';
 
-/** Planet detail with the properties required by spec `solar-system-planets`, in API units. */
+/**
+ * Planet detail with the properties required by spec `solar-system-planets`, in API units.
+ * Order: hero (orbital period and average temperature), moons, physical properties, orbit and rotation.
+ */
 export function PlanetDetail({ planet, adjacent }: PlanetDetailProps) {
   const t = useTranslations('planet');
   const tDetail = useTranslations('detail');
@@ -46,6 +49,8 @@ export function PlanetDetail({ planet, adjacent }: PlanetDetailProps) {
   const days = tDetail('units.days');
   const temperature = classifyTemperature(planet.avgTemp);
   const orbitalPeriod = number(planet.sideralOrbit);
+  const averageTemperature = number(planet.avgTemp);
+  const withUnit = (value: string | null, unit: string) => (value === null ? tCommon('notAvailable') : `${value} ${unit}`);
 
   return (
     <DetailLayout
@@ -66,12 +71,13 @@ export function PlanetDetail({ planet, adjacent }: PlanetDetailProps) {
         }
         image={getPlanetImage(planet.slug, planet.position - 1)}
         summary={[
-          { label: t('orbitalPeriod'), value: orbitalPeriod === null ? tCommon('notAvailable') : `${orbitalPeriod} ${days}` },
-          { label: t('knownMoons'), value: t('moonsCount', { count: planet.moons.length }) },
+          { label: t('orbitalPeriod'), value: withUnit(orbitalPeriod, days) },
+          { label: t('properties.avgTemp'), value: withUnit(averageTemperature, 'K') },
         ]}
         previous={{ href: `/planets/${adjacent.previous.slug}`, label: t('previous', { name: adjacent.previous.name }) }}
         next={{ href: `/planets/${adjacent.next.slug}`, label: t('next', { name: adjacent.next.name }) }}
       />
+      <MoonsSection moons={planet.moons} />
       <PropertyGroup
         id="physical"
         title={t('sections.physical')}
@@ -92,11 +98,6 @@ export function PlanetDetail({ planet, adjacent }: PlanetDetailProps) {
           item('sideralOrbit', orbitalPeriod, days),
           item('sideralRotation', number(planet.sideralRotation), tDetail('units.hours')),
         ]}
-      />
-      <PropertyGroup
-        id="temperature"
-        title={t('sections.temperature')}
-        items={[item('avgTemp', number(planet.avgTemp), 'K')]}
       />
     </DetailLayout>
   );

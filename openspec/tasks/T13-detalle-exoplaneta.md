@@ -10,6 +10,7 @@ Crear `/[locale]/exoplanets/[slug]` con todos los datos del exoplaneta, reutiliz
 ## Requisitos
 
 - PROJECT.md §3 "Exoplanets API": "Display all the data", es decir, estrella anfitriona, año y método de descubrimiento, distancia (pc), radio (R⊕), masa (M⊕), periodo orbital (días), temperatura de equilibrio (K) y densidad (`pl_dens`, g/cm³), con las unidades de la API (D8).
+- Badge de temperatura (D14) con `pl_eqt` (temperatura de equilibrio): < 270 K "Cold"/"Frío", > 323 K "Hot"/"Caliente", entre medias sin badge (confirmado por el usuario tras T11).
 - Reutiliza `components/detail/` de T11, incluidas las flechas circulares en el orden de la consulta.
 - Breadcrumb "All planets / Exoplanets / <nombre>", "Back to all planets", `loading`/`error`/`not-found`.
 
