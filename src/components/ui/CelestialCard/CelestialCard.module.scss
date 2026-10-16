@@ -1,0 +1,91 @@
+@use '../../../styles/mixins';
+@use '../../../styles/typography' as type;
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  height: 100%;
+  padding: 1.25rem 1rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background: linear-gradient(180deg, var(--color-surface-raised) 0%, var(--color-surface-sunken) 100%);
+  text-decoration: none;
+  transition:
+    border-color 150ms ease,
+    background 150ms ease,
+    transform 150ms ease;
+
+  @include mixins.from-tablet {
+    padding: 1.75rem 1.25rem 1.5rem;
+  }
+
+  &:hover,
+  &:focus-visible {
+    border-color: var(--color-primary);
+    background: linear-gradient(180deg, rgb(150 38 47 / 28%) 0%, var(--color-surface-sunken) 100%);
+  }
+
+  &:hover {
+    transform: translateY(-0.125rem);
+  }
+}
+
+.image {
+  align-self: center;
+  width: 7rem;
+  height: auto;
+
+  @include mixins.from-desktop {
+    width: 9rem;
+  }
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  margin-top: auto;
+}
+
+.eyebrow {
+  color: var(--color-text-accent);
+  font-size: type.$font-size-base;
+}
+
+.titleRow {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.name {
+  font-size: type.$font-size-md;
+  font-weight: type.$font-weight-semibold;
+  line-height: type.$line-height-snug;
+  overflow-wrap: anywhere;
+
+  @include mixins.from-tablet {
+    font-size: type.$font-size-lg;
+  }
+}
+
+.arrow {
+  flex-shrink: 0;
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-top: 0.25rem;
+  color: var(--color-text-muted);
+
+  .card:hover &,
+  .card:focus-visible & {
+    color: var(--color-primary-hover);
+  }
+}
+
+.detail {
+  color: var(--color-text-muted);
+  font-size: type.$font-size-base;
+  letter-spacing: 0.04em;
+}

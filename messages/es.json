@@ -34,5 +34,15 @@
   "footer": {
     "title": "NASA Planet Explorer",
     "credits": "Imágenes y datos planetarios proporcionados por NASA y Solar System OpenData."
+  },
+  "ui": {
+    "breadcrumb": "Ruta de navegación",
+    "artistImpression": "Recreación artística",
+    "states": {
+      "loading": "Cargando…",
+      "empty": "No hay nada que mostrar en este momento.",
+      "error": "No hemos podido cargar estos datos. Inténtalo de nuevo más tarde.",
+      "configError": "Esta sección no está disponible: falta una credencial de la API en la configuración del servidor."
+    }
   }
 }

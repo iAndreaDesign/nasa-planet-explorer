@@ -32,7 +32,7 @@ Montar el home con sus tres secciones (PROJECT.md §2), siguiendo el estilo de l
 - [ ] Se ven 8 planetas en el orden correcto y 10 exoplanetas.
 - [ ] Hacer clic en una tarjeta navega a su detalle; hacer clic en la APOD abre su URL.
 - [ ] Si falla una API, las otras secciones se siguen mostrando.
-- [ ] El estilo es coherente con `figma/home.png` y `figma/home-mobile.png`.
+- [ ] El estilo es coherente con `figma/home.png` y `figma/home-mobile.png` (incluye la comprobación visual de las tarjetas de T09).
 - [ ] lint, typecheck, test y build pasan.
 
 ## Notas / hallazgos

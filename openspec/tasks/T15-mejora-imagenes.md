@@ -5,7 +5,7 @@
 
 ## Objetivo
 
-Sustituir la asignación rotativa provisional de las imágenes de `./planets` (D6) por imágenes específicas o un sistema mejor.
+Mejorar las imágenes. Desde T09, los planetas ya tienen imagen propia; queda pendiente sobre todo la de los exoplanetas, que rotan 3 imágenes genéricas.
 
 ## Requisitos
 

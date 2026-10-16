@@ -1,28 +1,12 @@
-import { render, screen, within } from '@testing-library/react';
+import { screen, within } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import { NextIntlClientProvider } from 'next-intl';
-import type { AnchorHTMLAttributes, ReactNode } from 'react';
 import { vi } from 'vitest';
-import en from '../../../messages/en.json';
-import es from '../../../messages/es.json';
+import { renderWithIntl as withIntl } from '@/test/intl';
 import { Footer } from './Footer/Footer';
 import { Header } from './Header/Header';
 import { MAIN_CONTENT_ID, SkipLink } from './SkipLink/SkipLink';
 
-vi.mock('@/i18n/navigation', () => ({
-  usePathname: () => '/',
-  Link: ({ href, locale, ...props }: AnchorHTMLAttributes<HTMLAnchorElement> & { locale?: string }) => (
-    <a href={locale ? `/${locale}${href}` : href} {...props} />
-  ),
-}));
-
-function withIntl(ui: ReactNode, locale: 'en' | 'es' = 'en') {
-  return render(
-    <NextIntlClientProvider locale={locale} messages={locale === 'en' ? en : es}>
-      {ui}
-    </NextIntlClientProvider>,
-  );
-}
+vi.mock('@/i18n/navigation', () => import('@/test/mocks').then((m) => m.navigationMock));
 
 describe('Header', () => {
   it('renders a banner with the title linking to the home page', () => {

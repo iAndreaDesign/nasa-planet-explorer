@@ -1,26 +1,17 @@
-import { render, screen } from '@testing-library/react';
+import { screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import { NextIntlClientProvider } from 'next-intl';
-import type { AnchorHTMLAttributes } from 'react';
 import { vi } from 'vitest';
-import en from '../../../../messages/en.json';
-import es from '../../../../messages/es.json';
+import { renderWithIntl } from '@/test/intl';
 import { LanguageSwitcher } from './LanguageSwitcher';
 
 // Locale-aware Link/usePathname depend on the Next.js router; replace them with plain equivalents.
-vi.mock('@/i18n/navigation', () => ({
+vi.mock('@/i18n/navigation', async () => ({
+  ...(await import('@/test/mocks')).navigationMock,
   usePathname: () => '/planets/mars',
-  Link: ({ href, locale, ...props }: AnchorHTMLAttributes<HTMLAnchorElement> & { locale: string }) => (
-    <a href={`/${locale}${href}`} {...props} />
-  ),
 }));
 
 function renderSwitcher(locale: 'en' | 'es') {
-  return render(
-    <NextIntlClientProvider locale={locale} messages={locale === 'en' ? en : es}>
-      <LanguageSwitcher />
-    </NextIntlClientProvider>,
-  );
+  return renderWithIntl(<LanguageSwitcher />, locale);
 }
 
 describe('LanguageSwitcher', () => {

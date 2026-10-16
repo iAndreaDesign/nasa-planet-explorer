@@ -66,6 +66,8 @@ describe('colour tokens (WCAG AA contrast)', () => {
     ['text-muted', 'surface'],
     ['text-muted', 'surface-raised'],
     ['text-accent', 'surface'],
+    ['text-primary', 'background'],
+    ['text-primary', 'surface-raised'],
     ['text', 'primary'],
     ['text', 'surface-sunken'],
     ['text-muted', 'surface-sunken'],

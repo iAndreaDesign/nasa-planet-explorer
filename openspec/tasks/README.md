@@ -20,7 +20,7 @@ Se ejecuta **una tarea cada vez**, con confirmación previa y posterior (CLAUDE.
 | T06 | [Servicio Exoplanetas](T06-servicio-exoplanetas.md)                     | T04                | Completada |
 | T07 | [Internacionalización (en/es)](T07-internacionalizacion.md)             | T01                | Completada |
 | T08 | [Tema global y estructura (header/footer)](T08-tema-y-layout.md)        | T07                | Completada |
-| T09 | [Componentes UI compartidos](T09-componentes-ui.md)                     | T03, T08           | Pendiente |
+| T09 | [Componentes UI compartidos](T09-componentes-ui.md)                     | T03, T08           | Completada |
 | T10 | [Página Home](T10-pagina-home.md)                                       | T04, T05, T06, T09 | Pendiente |
 | T11 | [Página de detalle de planeta](T11-detalle-planeta.md)                  | T05, T09           | Pendiente |
 | T12 | [Sección de lunas colapsable](T12-seccion-lunas.md)                     | T11                | Pendiente |
@@ -64,7 +64,7 @@ Las peticiones se hacen en Server Components; las lunas pasan por el Route Handl
 | D3  | Las peticiones se hacen en servidor y las lunas pasan por un proxy propio.                                                                                                                                                              |
 | D4  | APOD: se muestra solo `title`. La API devuelve las 25 últimas entradas, así que se usa la más reciente con `media_type: "image"` (comprobado el 2026-10-16: la entrada de ese día era un vídeo y su `hdurl` venía vacío).            |
 | D5  | Solo se muestran los campos que especifica PROJECT.md; el tipo es el `bodyType` de la API. Los mockups son orientativos: valen para el estilo, no para los datos.                                                                       |
-| D6  | Imágenes: las de `./planets` (de momento 3 genéricas), asignadas de forma rotativa y determinista. Se mejorará en T15.                                                                                                                  |
+| D6  | Imágenes: cada planeta usa su imagen de `./planets` (por slug); los exoplanetas rotan las 3 genéricas (actualizada en T09). Se mejorará en T15. |
 | D7  | Nada de contenido editorial (descripción, habitabilidad ni comparativas): solo datos de la API.                                                                                                                                          |
 | D8  | Las unidades se muestran tal como las devuelve la API, sin conversiones.                                                                                                                                                                |
 | D9  | Sin menú de navegación ni buscador. En el detalle hay flechas anterior/siguiente circulares (del primero se pasa al último y al revés).                                                                                                  |
