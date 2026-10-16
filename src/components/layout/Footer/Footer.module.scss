@@ -1,0 +1,26 @@
+@use '../../../styles/mixins';
+@use '../../../styles/typography' as type;
+
+.footer {
+  margin-top: auto;
+  border-top: 1px solid var(--color-border);
+}
+
+.inner {
+  @include mixins.container;
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding-block: 2rem;
+}
+
+.title {
+  font-size: type.$font-size-base;
+  font-weight: type.$font-weight-semibold;
+}
+
+.credits {
+  color: var(--color-text-muted);
+  font-size: type.$font-size-base;
+}

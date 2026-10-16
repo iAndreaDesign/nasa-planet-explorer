@@ -1,0 +1,46 @@
+@use '../../../styles/mixins';
+@use '../../../styles/typography' as type;
+
+.header {
+  border-bottom: 1px solid var(--color-border);
+  background-color: var(--color-surface-sunken);
+}
+
+.inner {
+  @include mixins.container;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  min-height: 4.5rem;
+
+  @include mixins.from-tablet {
+    min-height: 5.5rem;
+  }
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  border-radius: var(--radius-sm);
+  font-size: type.$font-size-base;
+  font-weight: type.$font-weight-medium;
+  text-decoration: none;
+
+  @include mixins.from-tablet {
+    font-size: type.$font-size-md;
+  }
+}
+
+.logo {
+  flex-shrink: 0;
+  width: 2.25rem;
+  height: 2.25rem;
+
+  @include mixins.from-tablet {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+}

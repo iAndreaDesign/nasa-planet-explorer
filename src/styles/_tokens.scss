@@ -1,0 +1,57 @@
+// Design tokens (CLAUDE.md §4). Dark theme only.
+// Colours are exposed as CSS custom properties; breakpoints and spacing as Sass variables.
+
+:root {
+  // Brand
+  --color-primary: #96262f;
+  --color-primary-hover: #ad2e38;
+  --color-background: #121a28;
+  --color-accent: #184c9a;
+
+  // Surfaces derived from the background
+  --color-surface-sunken: #0c1320;
+  --color-surface: #18233a;
+  --color-surface-raised: #1e2b45;
+  --color-border: rgb(255 255 255 / 10%);
+  --color-border-strong: rgb(255 255 255 / 22%);
+
+  // Text (contrast on --color-background: primary 16:1, muted 8:1, accent 6.5:1)
+  --color-text: #f5f7fa;
+  --color-text-muted: #a9b4c6;
+  --color-text-accent: #6ea0e8;
+
+  --color-focus: #8fb8f2;
+
+  // Typography
+  --font-sans: var(--font-inter), system-ui, -apple-system, 'Segoe UI', sans-serif;
+
+  // Shape
+  --radius-sm: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1.25rem;
+  --radius-pill: 999rem;
+
+  // Layout
+  --content-max-width: 80rem;
+  --gutter: 1rem;
+
+  @media (min-width: 48rem) {
+    --gutter: 2rem;
+  }
+
+  @media (min-width: 80rem) {
+    --gutter: 4.5rem;
+  }
+}
+
+$breakpoint-tablet: 48rem;
+$breakpoint-desktop: 64rem;
+
+$space-1: 0.25rem;
+$space-2: 0.5rem;
+$space-3: 0.75rem;
+$space-4: 1rem;
+$space-6: 1.5rem;
+$space-8: 2rem;
+$space-12: 3rem;
+$space-16: 4rem;

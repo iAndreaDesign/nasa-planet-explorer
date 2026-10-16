@@ -24,5 +24,15 @@
     "title": "Página no encontrada",
     "description": "La página que buscas no existe.",
     "backHome": "Volver al inicio"
+  },
+  "layout": {
+    "skipToContent": "Saltar al contenido"
+  },
+  "header": {
+    "title": "NASA Planet Explorer"
+  },
+  "footer": {
+    "title": "NASA Planet Explorer",
+    "credits": "Imágenes y datos planetarios proporcionados por NASA y Solar System OpenData."
   }
 }

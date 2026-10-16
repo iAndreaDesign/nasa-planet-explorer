@@ -1,0 +1,21 @@
+@use '../../../styles/mixins';
+@use '../../../styles/typography' as type;
+
+.skipLink {
+  position: absolute;
+  top: 0.75rem;
+  left: 0.75rem;
+  z-index: 10;
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius-sm);
+  background-color: var(--color-primary);
+  color: var(--color-text);
+  font-size: type.$font-size-base;
+  font-weight: type.$font-weight-semibold;
+  text-decoration: none;
+  transform: translateY(-200%);
+
+  &:focus-visible {
+    transform: none;
+  }
+}

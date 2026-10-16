@@ -1,0 +1,12 @@
+@use '../../styles/mixins';
+@use '../../styles/typography' as type;
+
+.page {
+  @include mixins.container;
+
+  padding-block: 3rem;
+
+  h1 {
+    font-size: type.$font-size-2xl;
+  }
+}

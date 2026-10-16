@@ -1,4 +1,6 @@
-// Placeholder global styles. Design tokens, typography and theme are defined in T08.
+@use 'tokens';
+@use 'typography' as type;
+@use 'mixins';
 
 *,
 *::before,
@@ -8,12 +10,57 @@
 
 html {
   color-scheme: dark;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 
 body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   margin: 0;
-  background-color: #121a28;
-  color: #fff;
-  font-family: system-ui, sans-serif;
-  font-size: 1rem;
+  background-color: var(--color-background);
+  color: var(--color-text);
+  font-family: var(--font-sans);
+  font-size: type.$font-size-base;
+  line-height: type.$line-height-body;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: type.$font-weight-medium;
+  line-height: type.$line-height-tight;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+}
+
+:focus-visible {
+  @include mixins.focus-ring;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
 }

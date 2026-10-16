@@ -3,6 +3,7 @@
 import { useLocale, useTranslations } from 'next-intl';
 import { Link, usePathname } from '@/i18n/navigation';
 import { routing } from '@/i18n/routing';
+import styles from './LanguageSwitcher.module.scss';
 
 /** Switches language while keeping the current page (spec `localization`). */
 export function LanguageSwitcher() {
@@ -12,10 +13,11 @@ export function LanguageSwitcher() {
 
   return (
     <nav aria-label={t('label')}>
-      <ul>
+      <ul className={styles.list}>
         {routing.locales.map((locale) => (
           <li key={locale}>
             <Link
+              className={styles.link}
               href={pathname}
               locale={locale}
               hrefLang={locale}

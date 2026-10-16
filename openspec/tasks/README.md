@@ -19,7 +19,7 @@ Se ejecuta **una tarea cada vez**, con confirmación previa y posterior (CLAUDE.
 | T05 | [Servicio Sistema Solar](T05-servicio-sistema-solar.md)                 | T04                | Completada |
 | T06 | [Servicio Exoplanetas](T06-servicio-exoplanetas.md)                     | T04                | Completada |
 | T07 | [Internacionalización (en/es)](T07-internacionalizacion.md)             | T01                | Completada |
-| T08 | [Tema global y estructura (header/footer)](T08-tema-y-layout.md)        | T07                | Pendiente |
+| T08 | [Tema global y estructura (header/footer)](T08-tema-y-layout.md)        | T07                | Completada |
 | T09 | [Componentes UI compartidos](T09-componentes-ui.md)                     | T03, T08           | Pendiente |
 | T10 | [Página Home](T10-pagina-home.md)                                       | T04, T05, T06, T09 | Pendiente |
 | T11 | [Página de detalle de planeta](T11-detalle-planeta.md)                  | T05, T09           | Pendiente |

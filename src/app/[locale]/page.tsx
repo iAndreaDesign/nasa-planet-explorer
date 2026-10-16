@@ -3,6 +3,7 @@ import { hasLocale, useTranslations } from 'next-intl';
 import { setRequestLocale } from 'next-intl/server';
 import { use } from 'react';
 import { routing } from '@/i18n/routing';
+import styles from './page.module.scss';
 
 interface HomePageProps {
   params: Promise<{ locale: string }>;
@@ -17,8 +18,8 @@ export default function HomePage({ params }: HomePageProps) {
   const t = useTranslations('home');
 
   return (
-    <main>
+    <div className={styles.page}>
       <h1>{t('title')}</h1>
-    </main>
+    </div>
   );
 }

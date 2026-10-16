@@ -1,11 +1,17 @@
 import type { Metadata } from 'next';
+import { Inter } from 'next/font/google';
 import { notFound } from 'next/navigation';
 import { hasLocale, NextIntlClientProvider } from 'next-intl';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import type { ReactNode } from 'react';
-import { LanguageSwitcher } from '@/components/layout/LanguageSwitcher/LanguageSwitcher';
+import { Footer } from '@/components/layout/Footer/Footer';
+import { Header } from '@/components/layout/Header/Header';
+import { MAIN_CONTENT_ID, SkipLink } from '@/components/layout/SkipLink/SkipLink';
 import { routing } from '@/i18n/routing';
 import '@/styles/globals.scss';
+import styles from './layout.module.scss';
+
+const inter = Inter({ subsets: ['latin'], display: 'swap', variable: '--font-inter' });
 
 interface LocaleLayoutProps {
   children: ReactNode;
@@ -31,12 +37,16 @@ export default async function LocaleLayout({ children, params }: LocaleLayoutPro
   setRequestLocale(locale);
 
   return (
-    <html lang={locale}>
-      <body>
+    <html lang={locale} className={inter.variable}>
+      {/* Browser extensions often inject attributes into <body>; ignore those hydration mismatches. */}
+      <body suppressHydrationWarning>
         <NextIntlClientProvider>
-          {/* Moved into the header in T08. */}
-          <LanguageSwitcher />
-          {children}
+          <SkipLink />
+          <Header />
+          <main id={MAIN_CONTENT_ID} tabIndex={-1} className={styles.main}>
+            {children}
+          </main>
+          <Footer />
         </NextIntlClientProvider>
       </body>
     </html>
